@@ -7,7 +7,7 @@ export default function Header() {
   const pathname = usePathname();
   return (
     <header>
-      nazar-mykhalkevych
+      <div className='logo'>nazar-mykhalkevych</div>
       <nav className='nav'>
         <ul>
           <li>
@@ -29,6 +29,14 @@ export default function Header() {
               href='/projects'
             >
               _projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={`${pathname === '/contact' ? 'active' : ''}`}
+              href='/contact'
+            >
+              _contact-me
             </Link>
           </li>
         </ul>

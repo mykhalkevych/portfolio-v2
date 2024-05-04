@@ -6,14 +6,51 @@ header {
   grid-area: header;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 260px;
+  padding: 0 15px;
+  border-right: 1px solid var(--grey);
+}
+
 nav {
+  height: 100%;
+  width: calc(100% - 260px);
   ul {
     display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+  li:last-child {
+    margin-left: auto;
   }
   a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-right: 1px solid var(--grey);
+    padding: 0 15px;
     text-decoration: none;
+    position: relative;
+    color: inherit;
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 0;
+      background: red;
+      left: 50%;
+      bottom: 0;
+    }
     &.active {
       color: #fff;
+      &::after {
+        transition: all 0.3s;
+        left: 0;
+        width: 100%;
+      }
     }
   }
 }
