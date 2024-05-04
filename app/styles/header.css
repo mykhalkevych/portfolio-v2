@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  height: 56px;
+  align-items: center;
+  border-bottom: 1px solid var(--grey);
+  grid-area: header;
+}
+
+nav {
+  ul {
+    display: flex;
+  }
+  a {
+    text-decoration: none;
+    &.active {
+      color: #fff;
+    }
+  }
+}

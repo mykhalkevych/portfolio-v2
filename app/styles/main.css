@@ -1,0 +1,16 @@
+body {
+  background-color: var(--main-bg);
+  color: var(--main-color);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    'header'
+    'content'
+    'footer';
+}
+
+main {
+  grid-area: content;
+}
