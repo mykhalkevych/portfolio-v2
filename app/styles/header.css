@@ -35,6 +35,9 @@ nav {
     text-decoration: none;
     position: relative;
     color: inherit;
+    &:hover {
+      color: #fff;
+    }
     &::after {
       content: '';
       position: absolute;

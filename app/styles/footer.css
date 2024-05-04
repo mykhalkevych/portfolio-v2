@@ -5,17 +5,31 @@ footer {
   align-items: center;
   border-top: 1px solid var(--grey);
   grid-area: footer;
-  padding: 0 15px;
+  padding-left: 15px;
 }
 
 .social-links {
   display: flex;
   align-items: center;
+  height: 100%;
   a {
-    margin-left: 5px;
+    height: 100%;
+    display: flex;
+    padding: 0 12px;
+    border-right: 1px solid var(--grey);
+    &:hover {
+      svg {
+        fill: #fff;
+      }
+    }
+    &:first-child {
+      margin-left: 10px;
+      border-left: 1px solid var(--grey);
+    }
     svg {
       width: 30px;
       height: auto;
+      fill: var(--main-color);
     }
   }
 }
@@ -23,8 +37,18 @@ footer {
   display: flex;
   align-items: center;
   text-decoration: none;
-
+  color: inherit;
+  height: 100%;
+  border-left: 1px solid var(--grey);
+  padding: 0 15px;
+  &:hover {
+    color: #fff;
+    svg {
+      fill: #fff;
+    }
+  }
   svg {
     width: 30px;
+    fill: var(--main-color);
   }
 }
