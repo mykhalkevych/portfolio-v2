@@ -43,7 +43,7 @@ nav {
       position: absolute;
       height: 2px;
       width: 0;
-      background: red;
+      background: var(--secondary);
       left: 50%;
       bottom: 0;
     }

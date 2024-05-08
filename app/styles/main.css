@@ -13,4 +13,47 @@ body {
 
 main {
   grid-area: content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(./../../public/background_blurs.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 70%;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hi-text {
+  color: #fff;
+}
+.title {
+  color: #fff;
+  font-size: 50px;
+  margin: 15px 0;
+}
+.subtitle {
+  color: var(--primary);
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.comments-block {
+  line-height: 1.5;
+}
+
+.game-block {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  background: linear-gradient(rgb(23 85 83 / 26%), rgba(67, 217, 173, 0.13));
+  margin-left: 20px;
 }
