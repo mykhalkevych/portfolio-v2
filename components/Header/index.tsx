@@ -17,8 +17,8 @@ export default function Header() {
           </li>
           <li>
             <Link
-              className={`${pathname === '/about' ? 'active' : ''}`}
-              href='/about'
+              className={`${pathname.includes('/about') ? 'active' : ''}`}
+              href='/about/personal-info'
             >
               _about-me
             </Link>

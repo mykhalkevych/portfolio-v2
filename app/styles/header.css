@@ -15,7 +15,7 @@ header {
   border-right: 1px solid var(--grey);
 }
 
-nav {
+.nav {
   height: 100%;
   width: calc(100% - 260px);
   ul {
