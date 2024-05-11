@@ -54,3 +54,9 @@ main {
   background: linear-gradient(rgb(23 85 83 / 26%), rgba(67, 217, 173, 0.13));
   margin-left: 20px;
 }
+
+.page {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}

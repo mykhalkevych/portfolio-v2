@@ -1,16 +1,41 @@
 export interface NavListItem {
   title: string;
-  icon: string;
   color: string;
   path: string;
-  type: 'folder' | 'page';
+  type: 'folder' | 'anchor';
+  anchors: string[];
 }
-export const AboutNavList: NavListItem[] = [
+
+export const PersonalNavList: NavListItem[] = [
+  {
+    title: 'bio',
+    color: 'primary',
+    path: 'bio',
+    type: 'folder',
+    anchors: ['about'],
+  },
+  {
+    title: 'education',
+    color: 'secondary',
+    path: 'education',
+    type: 'folder',
+    anchors: ['school', 'university'],
+  },
+  {
+    title: 'interests',
+    color: 'third',
+    path: 'interests',
+    type: 'folder',
+    anchors: ['football', 'volleyball'],
+  },
+];
+
+export const ProfessionalNavList: NavListItem[] = [
   {
     title: 'Bio',
     color: '',
-    icon: '',
     path: 'bio',
     type: 'folder',
+    anchors: ['skills'],
   },
 ];

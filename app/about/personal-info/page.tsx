@@ -1,3 +1,8 @@
+'use client';
+import { useRouter } from 'next/navigation';
+
 export default function Page() {
-  return <h1>Personal info</h1>;
+  const router = useRouter();
+  router.push('about/personal-info/bio');
+  return <></>;
 }

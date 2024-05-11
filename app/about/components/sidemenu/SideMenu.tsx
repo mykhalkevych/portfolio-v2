@@ -8,27 +8,27 @@ import {
   RiGamepadFill,
 } from '@remixicon/react';
 
-import './LeftMenu.css';
+import './SideMenu.css';
 
-export default function LeftMenu() {
+export default function SideMenu() {
   const pathname = usePathname();
   return (
-    <nav className='left-nav'>
+    <nav className='side-nav'>
       <ul>
         <li>
           <Link
-            className={`${
-              pathname.includes('/professional-info') ? 'active' : ''
-            }`}
-            href='/about/professional-info'
+            className={`${pathname.includes('/personal-info') ? 'active' : ''}`}
+            href='/about/personal-info'
           >
             <RiProfileFill />
           </Link>
         </li>
         <li>
           <Link
-            className={`${pathname.includes('/personal-info') ? 'active' : ''}`}
-            href='/about/personal-info'
+            className={`${
+              pathname.includes('/professional-info') ? 'active' : ''
+            }`}
+            href='/about/professional-info'
           >
             <RiTerminalBoxFill />
           </Link>

@@ -10,14 +10,14 @@ header {
   display: flex;
   align-items: center;
   height: 100%;
-  width: 260px;
+  width: 300px;
   padding: 0 15px;
   border-right: 1px solid var(--grey);
 }
 
 .nav {
   height: 100%;
-  width: calc(100% - 260px);
+  width: calc(100% - 300px);
   ul {
     display: flex;
     justify-content: space-between;
