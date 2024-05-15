@@ -12,7 +12,7 @@ export const PersonalNavList: NavListItem[] = [
     color: 'primary',
     path: 'bio',
     type: 'folder',
-    anchors: ['about'],
+    anchors: ['summary'],
   },
   {
     title: 'education',

@@ -34,7 +34,7 @@ const SubNavigation: FC<Props> = ({ navList, navTitle }) => {
             <li key={item.path}>
               <Link
                 className={`folder${isActive ? ' active' : ''}`}
-                href={`${pathname}/${item.path}`}
+                href={`${item.path}`}
                 replace
               >
                 {isActive ? (

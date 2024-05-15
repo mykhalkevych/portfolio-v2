@@ -18,7 +18,8 @@ export default function Header() {
           <li>
             <Link
               className={`${pathname.includes('/about') ? 'active' : ''}`}
-              href='/about/personal-info'
+              href='/about/personal-info/bio'
+              replace
             >
               _about-me
             </Link>
