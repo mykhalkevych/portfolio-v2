@@ -6,8 +6,6 @@ export default function PersonalInfo({
 }: {
   children: React.ReactNode;
 }) {
-  const navList = PersonalNavList;
-
   return (
     <>
       <SubNavigation

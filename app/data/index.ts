@@ -32,10 +32,41 @@ export const PersonalNavList: NavListItem[] = [
 
 export const ProfessionalNavList: NavListItem[] = [
   {
-    title: 'Bio',
-    color: '',
-    path: 'bio',
+    title: 'experience',
+    color: 'primary',
+    path: 'experience',
+    type: 'folder',
+    anchors: ['experience'],
+  },
+  {
+    title: 'skills',
+    color: 'secondary',
+    path: 'skills',
     type: 'folder',
     anchors: ['skills'],
+  },
+  {
+    title: 'certificates',
+    color: 'third',
+    path: 'certificates',
+    type: 'folder',
+    anchors: ['certificates'],
+  },
+];
+
+export const HobbiesNavList: NavListItem[] = [
+  {
+    title: 'books',
+    color: 'primary',
+    path: 'books',
+    type: 'folder',
+    anchors: ['books'],
+  },
+  {
+    title: 'games',
+    color: 'secondary',
+    path: 'games',
+    type: 'folder',
+    anchors: ['games'],
   },
 ];

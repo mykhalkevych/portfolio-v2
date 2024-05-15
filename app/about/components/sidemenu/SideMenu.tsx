@@ -18,7 +18,7 @@ export default function SideMenu() {
         <li>
           <Link
             className={`${pathname.includes('/personal-info') ? 'active' : ''}`}
-            href='/about/personal-info'
+            href='/about/personal-info/bio'
           >
             <RiProfileFill />
           </Link>
@@ -28,7 +28,7 @@ export default function SideMenu() {
             className={`${
               pathname.includes('/professional-info') ? 'active' : ''
             }`}
-            href='/about/professional-info'
+            href='/about/professional-info/experience'
           >
             <RiTerminalBoxFill />
           </Link>
@@ -36,7 +36,7 @@ export default function SideMenu() {
         <li>
           <Link
             className={`${pathname.includes('/hobbies') ? 'active' : ''}`}
-            href='/about/hobbies'
+            href='/about/hobbies/books'
           >
             <RiGamepadFill />
           </Link>
