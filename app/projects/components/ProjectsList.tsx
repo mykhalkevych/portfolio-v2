@@ -8,11 +8,11 @@ interface Props {
 
 const ProjectsList: FC<Props> = ({ projectsList }) => {
   return (
-    <>
+    <div className='projects-list'>
       {projectsList.map((project) => (
         <ProjectListItem key={project.id} item={project}></ProjectListItem>
       ))}
-    </>
+    </div>
   );
 };
 
