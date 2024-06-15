@@ -6,10 +6,22 @@
   width: 1.6em;
   height: 1.6em;
   border-radius: 0.15em;
-  margin-right: 0.5em;
-  border: 0.15em solid #007a7e;
+  margin-right: 1.2em;
+  border: 0.15em solid var(--grey);
   outline: none;
   cursor: pointer;
+}
+
+.checkbox-wrapper {
+  margin: 5px 0;
+  label {
+    display: flex;
+    align-items: center;
+  }
+  .icon {
+    margin-right: 10px;
+    font-size: 22px;
+  }
 }
 
 input.checked {
@@ -18,12 +30,19 @@ input.checked {
 }
 
 input.checked::before {
-  content: '2714';
+  content: '';
   font-size: 1.5em;
   color: #fff;
   position: absolute;
-  right: 1px;
-  top: -5px;
+  left: 6px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .checkbox-wrapper input[type='checkbox']:disabled {

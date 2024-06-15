@@ -1,3 +1,4 @@
+'use client';
 import { FC, useState } from 'react';
 
 interface ICheckbox {
@@ -8,11 +9,12 @@ interface ICheckbox {
   className: string;
   error: boolean;
   name: string;
+  iconClass?: string;
+  color?: string;
 }
 
 export interface ICheckboxProps extends Partial<ICheckbox> {
   children?: React.ReactNode;
-  ariaLabel: string;
 }
 
 import './checkbox.css';
@@ -24,9 +26,11 @@ const Checkbox: FC<ICheckboxProps> = (props) => {
     children,
     value,
     label,
+    name,
+    iconClass,
     className,
-    ariaLabel,
     error,
+    color,
   } = props;
   const defaultChecked = checked ? checked : false;
   const [isChecked, setIsChecked] = useState(defaultChecked);
@@ -39,8 +43,16 @@ const Checkbox: FC<ICheckboxProps> = (props) => {
           className={isChecked ? 'checked' : ''}
           onChange={() => setIsChecked((prev) => !prev)}
         />
-        <span>{label}</span>
+        <span className='icon'>
+          <i
+            className={iconClass}
+            style={{ color: isChecked ? color : undefined }}
+          ></i>
+        </span>
+        <span>{name}</span>
       </label>
     </div>
   );
 };
+
+export default Checkbox;
