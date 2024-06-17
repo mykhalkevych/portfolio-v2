@@ -1,0 +1,22 @@
+.btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 38px;
+  line-height: 38px;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  border-radius: 5px;
+  font-family: inherit;
+
+  &.primary {
+    background: var(--grey);
+    color: #ffffff;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

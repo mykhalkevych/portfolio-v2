@@ -10,7 +10,7 @@ export const Projects: ProjectItem[] = [
     technologies: [{ color: '', name: 'React' }],
   },
   {
-    id: '1',
+    id: '2',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     name: 'Project 2',

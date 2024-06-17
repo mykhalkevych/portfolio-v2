@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { ProjectItem } from '@/app/interfaces';
+import Button from '@/components/ui/button/Button';
 import { FC } from 'react';
+import Link from 'next/link';
 
 interface Props {
   item: ProjectItem;
@@ -20,7 +22,9 @@ const ProjectListItem: FC<Props> = ({ item }) => {
           ))}
         </div>
         <p>{item.description}</p>
-        <button>view-project</button>
+        <Button>
+          <Link href={`/projects/${item.id}`}> view-project</Link>
+        </Button>
       </div>
     </div>
   );

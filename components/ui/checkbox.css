@@ -7,7 +7,7 @@
   height: 1.6em;
   border-radius: 0.15em;
   margin-right: 1.2em;
-  border: 0.15em solid var(--grey);
+  border: 1px solid var(--grey);
   outline: none;
   cursor: pointer;
 }
