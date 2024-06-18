@@ -5,17 +5,44 @@ export const Projects: ProjectItem[] = [
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry ',
     name: 'Project 1',
-    image: 'https://picsum.photos/seed/picsum/200/300',
+    image: 'https://picsum.photos/400/300/',
     type: '_ui-animation',
-    technologies: [{ color: '', name: 'React' }],
+    technologies: [
+      {
+        name: 'Vue',
+        color: '#3fb27f',
+        iconClass: 'ri-vuejs-line',
+      },
+      {
+        name: 'HTML',
+        color: '#dd4b25',
+        iconClass: 'ri-html5-line',
+      },
+      {
+        name: 'CSS',
+        color: '#1572b7',
+        iconClass: 'ri-css3-line',
+      },
+    ],
   },
   {
     id: '2',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     name: 'Project 2',
-    image: 'https://picsum.photos/seed/picsum/200/300',
+    image: 'https://picsum.photos/400/300',
     type: '_game',
-    technologies: [{ color: '', name: 'Vue' }],
+    technologies: [
+      {
+        name: 'React',
+        color: '#5ed3f3',
+        iconClass: 'ri-reactjs-line',
+      },
+      {
+        name: 'Angular',
+        color: '#bd002e',
+        iconClass: 'ri-angularjs-line',
+      },
+    ],
   },
 ];

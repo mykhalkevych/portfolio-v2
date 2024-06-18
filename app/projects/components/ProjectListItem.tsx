@@ -10,21 +10,34 @@ interface Props {
 
 const ProjectListItem: FC<Props> = ({ item }) => {
   return (
-    <div className='project-card'>
-      <h1 className='project-title'>{item.name}</h1>
-      <div className='img'>
-        <img src={item.image} alt={item.name} />
-      </div>
-      <div className='desc'>
-        <div className='technologies'>
-          {item.technologies.map((t) => (
-            <span key={t.name}>{t.name}</span>
-          ))}
+    <div className='project-item'>
+      <h1 className='project-title'>
+        {item.name}
+        {item.type && <span> {`// ${item.type}`}</span>}
+      </h1>
+      <div className='project-card'>
+        <div className='img'>
+          <img src={item.image} alt={item.name} />
         </div>
-        <p>{item.description}</p>
-        <Button>
-          <Link href={`/projects/${item.id}`}> view-project</Link>
-        </Button>
+        <div className='desc'>
+          <div className='technologies'>
+            {item.technologies.map((t) => (
+              <span
+                className='tag'
+                style={{ background: t.color }}
+                key={t.name}
+              >
+                <span className='icon'>
+                  <i className={t.iconClass}></i>
+                </span>
+              </span>
+            ))}
+          </div>
+          <p>{item.description}</p>
+          <Button>
+            <Link href={`/projects/${item.id}`}> view-project</Link>
+          </Button>
+        </div>
       </div>
     </div>
   );

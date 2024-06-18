@@ -9,6 +9,7 @@ body {
     'header'
     'content'
     'footer';
+  line-height: 1.4;
 }
 
 main {

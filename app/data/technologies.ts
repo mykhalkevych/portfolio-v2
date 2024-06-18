@@ -7,7 +7,7 @@ export const Technologies: Technology[] = [
   },
   {
     name: 'Angular',
-    color: '#bd002e',
+    color: '#d6002f',
     iconClass: 'ri-angularjs-line',
   },
   {
@@ -17,7 +17,7 @@ export const Technologies: Technology[] = [
   },
   {
     name: 'HTML',
-    color: '#dd4b25',
+    color: '#e96228',
     iconClass: 'ri-html5-line',
   },
   {
