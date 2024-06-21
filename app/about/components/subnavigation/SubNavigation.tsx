@@ -12,6 +12,7 @@ import {
 import './SubNavigation.css';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
+import SubNavTitle from '@/components/ui/subnavtitle/SubNavTitle';
 interface Props {
   navTitle: string;
   navList: NavListItem[];
@@ -23,10 +24,7 @@ const SubNavigation: FC<Props> = ({ navList, navTitle }) => {
   console.log(router);
   return (
     <div className='sub-nav'>
-      <div className='sub-nav-title'>
-        <RiArrowDropDownFill size={30} />
-        {navTitle}
-      </div>
+      <SubNavTitle title={navTitle}></SubNavTitle>
       <ul>
         {navList.map((item) => {
           const isActive = pathname.includes(`${item.path}`);
