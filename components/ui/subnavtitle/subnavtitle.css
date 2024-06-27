@@ -1,0 +1,7 @@
+.sub-nav-title {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-bottom: 1px solid var(--grey);
+}

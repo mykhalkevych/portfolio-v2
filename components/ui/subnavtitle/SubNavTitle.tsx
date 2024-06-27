@@ -1,6 +1,8 @@
 import { RiArrowDropDownFill } from '@remixicon/react';
 import { FC } from 'react';
 
+import './subnavtitle.css';
+
 interface ISubNavTitleProps {
   title: string;
 }

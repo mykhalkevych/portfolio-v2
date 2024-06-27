@@ -1,5 +1,6 @@
 'use client';
 
+import Button from '@/components/ui/button/Button';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 type Inputs = {
@@ -27,17 +28,27 @@ export default function ContactForm() {
         <input {...register('name')} id='name' />
       </div>
 
-      {/* include validation with required or other standard HTML validation rules */}
-      <input type='email' {...register('email', { required: true })} />
-      {/* errors will return when field validation fails  */}
-      {errors.email && <span>This field is required</span>}
+      <div className='form-control'>
+        <label htmlFor='email'>_email</label>
+        <input
+          type='email'
+          {...register('email', { required: true })}
+          id='email'
+        />
+        <span className='error'>
+          {errors.email && <span>This field is required</span>}
+        </span>
+      </div>
 
-      {/* include validation with required or other standard HTML validation rules */}
-      <textarea {...register('message', { required: true })} />
-      {/* errors will return when field validation fails  */}
-      {errors.email && <span>This field is required</span>}
+      <div className='form-control'>
+        <label htmlFor='message'>_message</label>
+        <textarea {...register('message', { required: true })} id='message' />
+        <span className='error'>
+          {errors.message && <span>This field is required</span>}
+        </span>
+      </div>
 
-      <input type='submit' />
+      <Button>submit-message</Button>
     </form>
   );
 }
