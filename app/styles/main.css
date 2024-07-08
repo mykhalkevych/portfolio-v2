@@ -3,6 +3,7 @@ body {
   color: var(--main-color);
   height: 100vh;
   display: grid;
+  width: 100vw;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
@@ -14,6 +15,9 @@ body {
 
 main {
   grid-area: content;
+  width: 100%;
+  height: calc(100vh -112px);
+  overflow: auto;
 }
 
 .wrapper {

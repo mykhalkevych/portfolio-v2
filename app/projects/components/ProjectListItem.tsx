@@ -17,7 +17,7 @@ const ProjectListItem: FC<Props> = ({ item }) => {
       </h1>
       <div className='project-card'>
         <div className='img'>
-          <img src={item.image} alt={item.name} />
+          <img src={item.images[0]} alt={item.name} />
         </div>
         <div className='desc'>
           <div className='technologies'>

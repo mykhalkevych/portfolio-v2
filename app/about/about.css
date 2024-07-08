@@ -1,0 +1,9 @@
+.token {
+  background: transparent !important;
+  color: var(--main-color) !important;
+  padding: 8px 0px !important;
+}
+
+.linenumber {
+  width: 30px !important ;
+}

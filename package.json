@@ -12,9 +12,12 @@
     "@remixicon/react": "^4.2.0",
     "next": "14.2.1",
     "react": "^18",
+    "react-code-blocks": "^0.1.6",
     "react-dom": "^18",
     "react-hook-form": "^7.52.0",
+    "react-loader-spinner": "^6.1.6",
     "remixicon": "^4.2.0",
+    "swiper": "^11.1.4",
     "typeit-react": "^2.7.1"
   },
   "devDependencies": {

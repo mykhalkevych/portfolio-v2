@@ -5,7 +5,8 @@ export const Projects: ProjectItem[] = [
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry ',
     name: 'Project 1',
-    image: 'https://picsum.photos/400/300/',
+    images: ['https://picsum.photos/400/300/'],
+    link: 'github.com',
     type: '_ui-animation',
     technologies: [
       {
@@ -30,7 +31,7 @@ export const Projects: ProjectItem[] = [
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
     name: 'Project 2',
-    image: 'https://picsum.photos/400/300',
+    images: ['https://picsum.photos/400/300'],
     type: '_game',
     technologies: [
       {

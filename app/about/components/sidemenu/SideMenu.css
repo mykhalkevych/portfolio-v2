@@ -3,6 +3,7 @@
   width: 56px;
   justify-content: center;
   border-right: 1px solid var(--grey);
+  flex-shrink: 0;
 
   a {
     width: 100%;

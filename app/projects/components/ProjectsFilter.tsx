@@ -8,9 +8,11 @@ interface Props {
 const ProjectsFilter: FC<Props> = ({ projectsTechnologies }) => {
   return (
     <div className='projects-filter'>
-      {projectsTechnologies.map((technology) => (
-        <Checkbox key={technology.name} {...technology}></Checkbox>
-      ))}
+      <div className='filter-items'>
+        {projectsTechnologies.map((technology) => (
+          <Checkbox key={technology.name} {...technology}></Checkbox>
+        ))}
+      </div>
     </div>
   );
 };

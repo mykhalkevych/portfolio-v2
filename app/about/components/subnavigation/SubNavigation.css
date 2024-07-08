@@ -2,6 +2,7 @@
   width: 244px;
   border-right: 1px solid var(--grey);
   background-color: var(--second-bg);
+  flex-shrink: 0;
   ul {
     padding-top: 10px;
   }
