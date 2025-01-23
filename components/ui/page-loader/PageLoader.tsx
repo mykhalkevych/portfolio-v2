@@ -1,3 +1,5 @@
+'use client';
+
 import { Audio } from 'react-loader-spinner';
 export default function PageLoader() {
   return (

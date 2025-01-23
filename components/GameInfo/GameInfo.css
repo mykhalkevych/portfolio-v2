@@ -1,0 +1,68 @@
+.game-rules {
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(1, 20, 35, 0.19);
+  margin-left: 15px;
+}
+
+.comments {
+  color: #fff;
+  font-size: 13px;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 30px 30px;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.arrow {
+  &.arrow-left {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  &.arrow-top {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  &.arrow-bottom {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  &.arrow-right {
+    grid-column: 3;
+    grid-row: 2;
+  }
+}
+
+.food-block {
+  margin-left: 15px;
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.foods {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  padding-right: 20px;
+}
+
+.food-item {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: #43d9ad;
+  border: 4px solid #2c8a79;
+  box-shadow: 0 0 2px 1px #27746e;
+  opacity: 1;
+  transition: opacity 0.5s;
+  &.eaten {
+    opacity: 0.2;
+  }
+}

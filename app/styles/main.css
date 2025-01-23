@@ -58,6 +58,10 @@ main {
   border-radius: 10px;
   background: linear-gradient(rgb(23 85 83 / 26%), rgba(67, 217, 173, 0.13));
   margin-left: 20px;
+  padding: 30px;
+  box-shadow: 0px 0px 15px 1px #000;
+  display: flex;
+  justify-content: space-between;
 }
 
 .page {

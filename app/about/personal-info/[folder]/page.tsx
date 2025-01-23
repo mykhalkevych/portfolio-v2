@@ -1,16 +1,23 @@
 'use client';
 
-import { CodeBlock, monokaiSublime } from 'react-code-blocks';
+import { CodeBlock, dracula } from 'react-code-blocks';
 import { aboutData } from '../../data';
+import TypeIt from 'typeit-react';
 export default function Page({ params }: { params: { folder: string } }) {
   console.log(params.folder);
   const text: string = aboutData[params.folder];
+
   return (
-    <CodeBlock
-      text={text}
-      language={'jsx'}
-      theme={monokaiSublime}
-      customStyle={{ width: '100%', background: 'transparent' }}
-    />
+    <TypeIt options={{ speed: 20 }}>
+      <CodeBlock
+        text={text}
+        language={'jsx'}
+        theme={dracula}
+        customStyle={{
+          width: '100%',
+          background: 'transparent',
+        }}
+      />
+    </TypeIt>
   );
 }

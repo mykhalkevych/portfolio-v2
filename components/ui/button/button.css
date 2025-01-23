@@ -9,14 +9,21 @@
   padding: 0 15px;
   border-radius: 5px;
   font-family: inherit;
+  transition: all 0.3s ease;
 
   &.primary {
     background: var(--grey);
     color: #ffffff;
   }
 
+  &.secondary {
+    color: #ffffff;
+    background-color: var(--secondary);
+  }
+
   &:hover {
     cursor: pointer;
+    background-color: var(--secondary);
   }
 
   a {

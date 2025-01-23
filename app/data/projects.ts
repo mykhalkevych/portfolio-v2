@@ -46,4 +46,84 @@ export const Projects: ProjectItem[] = [
       },
     ],
   },
+  {
+    id: '3',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+    name: 'Project 3',
+    images: ['https://picsum.photos/400/300'],
+    type: '_ui-animation',
+    technologies: [
+      {
+        name: 'React',
+        color: '#5ed3f3',
+        iconClass: 'ri-reactjs-line',
+      },
+      {
+        name: 'Angular',
+        color: '#bd002e',
+        iconClass: 'ri-angularjs-line',
+      },
+    ],
+  },
+  {
+    id: '4',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+    name: 'Project 4',
+    images: ['https://picsum.photos/400/300'],
+    type: '_ui-animation',
+    technologies: [
+      {
+        name: 'React',
+        color: '#5ed3f3',
+        iconClass: 'ri-reactjs-line',
+      },
+      {
+        name: 'Angular',
+        color: '#bd002e',
+        iconClass: 'ri-angularjs-line',
+      },
+    ],
+  },
+  {
+    id: '5',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+    name: 'Project 5',
+    images: ['https://picsum.photos/400/300'],
+    type: '_game',
+    technologies: [
+      {
+        name: 'React',
+        color: '#5ed3f3',
+        iconClass: 'ri-reactjs-line',
+      },
+      {
+        name: 'Angular',
+        color: '#bd002e',
+        iconClass: 'ri-angularjs-line',
+      },
+    ],
+  },
+  {
+    id: '6',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+    name: 'Project 6',
+    images: ['https://picsum.photos/400/300'],
+    type: '_ui-animation',
+    technologies: [
+      {
+        name: 'React',
+        color: '#5ed3f3',
+        iconClass: 'ri-reactjs-line',
+      },
+      {
+        name: 'Angular',
+        color: '#bd002e',
+        iconClass: 'ri-angularjs-line',
+      },
+    ],
+  },
 ];

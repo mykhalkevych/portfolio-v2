@@ -1,0 +1,12 @@
+.snake-game {
+  position: relative;
+  Button {
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+  }
+  canvas {
+    display: block;
+    background-color: #011627d6;
+  }
+}

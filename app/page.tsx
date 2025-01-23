@@ -1,4 +1,6 @@
 'use client';
+import GameInfo from '@/components/GameInfo/GameInfo';
+import SnakeGame from '@/components/SnakeGame/SnakeGame';
 import TypeIt from 'typeit-react';
 
 export default function Home() {
@@ -22,7 +24,10 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className='game-block'></section>
+      <section className='game-block'>
+        <SnakeGame></SnakeGame>
+        <GameInfo></GameInfo>
+      </section>
     </div>
   );
 }
