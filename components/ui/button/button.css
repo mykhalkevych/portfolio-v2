@@ -34,6 +34,10 @@
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+    a {
+      pointer-events: none;
+      cursor: not-allowed;
+    }
   }
 
   &.animate {

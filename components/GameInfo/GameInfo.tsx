@@ -21,6 +21,22 @@ export default function GameInfo({
     }
     return '';
   };
+
+  const handleDownload = () => {
+    const fileUrl = '/files/CV_Nazar_Mykhalkevych_Frontend_Developer.pdf'; // Relative path to the PDF file
+
+    // Create an anchor element and trigger the download
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.setAttribute(
+      'download',
+      'CV_Nazar_Mykhalkevych_Frontend_Developer.pdf'
+    ); // Specify the name for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link); // Clean up after download
+  };
+
   return (
     <div className='game-info'>
       <div className='game-rules'>
@@ -144,6 +160,7 @@ export default function GameInfo({
           style={{ width: '120px' }}
           animate={isWin}
           variant='primary'
+          onClick={handleDownload}
         >
           Download CV
         </Button>
