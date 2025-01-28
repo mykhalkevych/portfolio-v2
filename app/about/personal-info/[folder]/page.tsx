@@ -8,7 +8,7 @@ export default function Page({ params }: { params: { folder: string } }) {
   const text: string = aboutData[params.folder];
 
   return (
-    <TypeIt options={{ speed: 20 }}>
+    <TypeIt options={{ speed: 2 }}>
       <CodeBlock
         text={text}
         language={'jsx'}

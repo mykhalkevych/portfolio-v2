@@ -1,9 +1,30 @@
 'use client';
 import GameInfo from '@/components/GameInfo/GameInfo';
 import SnakeGame from '@/components/SnakeGame/SnakeGame';
+import { useState } from 'react';
+import { set } from 'react-hook-form';
 import TypeIt from 'typeit-react';
 
 export default function Home() {
+  const [foodEaten, setEatenFood] = useState(0);
+  const [isWin, setIsWin] = useState(false);
+  const foodCount = 10;
+  const handleFoodEaten = (newSnakeLength: number) => {
+    console.log('Snake Length:', newSnakeLength);
+    // You can update the state or display it in the parent
+
+    setEatenFood((prev) => prev + 1);
+  };
+
+  const resetGame = () => {
+    setEatenFood(0);
+  };
+
+  const setWin = () => {
+    console.log('You win!');
+    setIsWin(true);
+  };
+
   return (
     <div className='wrapper'>
       <section>
@@ -25,8 +46,17 @@ export default function Home() {
         </div>
       </section>
       <section className='game-block'>
-        <SnakeGame></SnakeGame>
-        <GameInfo></GameInfo>
+        <SnakeGame
+          maxFoodCount={foodCount}
+          onFoodEaten={handleFoodEaten}
+          resetGame={resetGame}
+          setWin={setWin}
+        ></SnakeGame>
+        <GameInfo
+          foodCount={foodCount}
+          foodEaten={foodEaten}
+          isWin={isWin}
+        ></GameInfo>
       </section>
     </div>
   );

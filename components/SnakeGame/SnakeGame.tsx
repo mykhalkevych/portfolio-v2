@@ -1,25 +1,36 @@
+'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import './SnakeGame.css';
 import Button from '../ui/button/Button';
-export default function SnakeGame() {
+interface SnakeGameProps {
+  onFoodEaten: (snakeLength: number, foodCount: number) => void;
+  resetGame: () => void;
+  setWin: () => void;
+  maxFoodCount: number;
+}
+
+export default function SnakeGame({
+  maxFoodCount,
+  onFoodEaten,
+  resetGame,
+  setWin,
+}: SnakeGameProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [snake, setSnake] = useState([
     { x: 10, y: 10 },
     { x: 25, y: 25 },
     { x: 40, y: 40 },
   ]); // Initial snake body
-  const [food, setFood] = useState<{ x: number; y: number } | null>({
-    x: 15,
-    y: 15,
-  }); // Initial food position
+  const [food, setFood] = useState<{ x: number; y: number } | null>(null); // Initial food position
   const [direction, setDirection] = useState({ x: 1, y: 0 }); // Moving right initially
-  const [speed, setSpeed] = useState(150); // Snake speed in milliseconds
+  const [speed, setSpeed] = useState(130); // Snake speed in milliseconds
   const [gameOver, setGameOver] = useState(false);
+  const [gameWin, setGameWin] = useState(false);
   const [foodCount, setFoodCount] = useState(0); // Count of food eaten
   const gridSize = 15; // Size of each square in the game grid (15x15 pixels)
   const boardWidth = 16; // 16 squares wide
   const boardHeight = 29; // 29 squares tall
-  const maxFoodCount = 10; // Maximum food pieces the snake can eat
+  const [gameStarted, setGameStarted] = useState(false); // Track if game has started
 
   // Snake gradient color stops
   const initialColor = { r: 67, g: 217, b: 173 }; // Starting color (head)
@@ -89,8 +100,11 @@ export default function SnakeGame() {
         });
       } else {
         setFood(null); // No more food after reaching the maxFoodCount
+        setGameOver(true);
+        setGameWin(true);
+        setWin();
       }
-
+      onFoodEaten(newSnake.length, foodCount + 1);
       setFoodCount(foodCount + 1); // Increment food eaten count
       setSpeed((prev) => prev * 0.95); // Speed up the snake
     } else {
@@ -102,10 +116,12 @@ export default function SnakeGame() {
 
   // Main game loop
   useEffect(() => {
-    const intervalId = setInterval(moveSnake, speed);
-    return () => clearInterval(intervalId);
+    if (gameStarted && !gameOver) {
+      const intervalId = setInterval(moveSnake, speed);
+      return () => clearInterval(intervalId);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [snake, direction, speed]);
+  }, [snake, direction, speed, gameStarted, gameOver]);
 
   // Handle key events for snake movement
   useEffect(() => {
@@ -172,18 +188,6 @@ export default function SnakeGame() {
       // Create a gradient for this segment
       const gradient = context.createLinearGradient(startX, startY, endX, endY);
 
-      // // Create a gradient for this segment
-      // const gradient = context.createLinearGradient(
-      //   segment.x * gridSize,
-      //   segment.y * gridSize, // Start of gradient (current segment)
-      //   segment.x * gridSize,
-      //   (segment.y + 1) * gridSize // End of gradient (current segment)
-      // );
-
-      // // Interpolate color for the current segment
-      // const segmentColor = interpolateColor(initialColor, endColor, factor);
-      // const gradientColor = `rgb(${segmentColor.r}, ${segmentColor.g}, ${segmentColor.b})`;
-
       // Set the gradient for this segment
       gradient.addColorStop(0, prevEndGradientColor); // Start with the end color of the previous segment
       gradient.addColorStop(1, gradientColor); // End with the current segment's color
@@ -229,19 +233,51 @@ export default function SnakeGame() {
     }
   }, [snake, food, foodCount]);
 
+  const startGame = () => {
+    console.log('start game');
+
+    setGameStarted(true);
+    setGameOver(false);
+    setSnake([
+      { x: 10, y: 10 },
+      { x: 25, y: 25 },
+      { x: 40, y: 40 },
+    ]); // Reset snake
+    setFood({
+      x: Math.floor(Math.random() * boardWidth), // Random x-coordinate within the board width
+      y: Math.floor(Math.random() * boardHeight), // Random y-coordinate within the board height
+    }); // Reset food
+    setDirection({ x: 1, y: 0 }); // Reset direction
+    setSpeed(130); // Reset speed
+    setFoodCount(0); // Reset food count
+    resetGame();
+  };
+
   return (
     <div className='snake-game'>
-      <Button variant='secondary'>start-game</Button>
+      {!gameStarted && !gameOver && (
+        <div>
+          <p className='text'>{"Let's play a game!"}</p>
+          <Button variant='secondary' onClick={startGame}>
+            start-game
+          </Button>
+        </div>
+      )}
+
+      {gameOver && (
+        <div className='game-status'>
+          {!gameWin && <span>Game Over!</span>}
+          {gameWin && <span>Well done!</span>}
+          <Button variant='link' onClick={startGame}>
+            start-again
+          </Button>
+        </div>
+      )}
       <canvas
         ref={canvasRef}
         width={gridSize * boardWidth}
         height={gridSize * boardHeight}
-        style={{ border: '1px solid black' }}
       />
-      {gameOver && <h2>Game Over! Refresh to restart.</h2>}
-      {foodCount >= maxFoodCount && !gameOver && (
-        <h2> You have eaten all the food! You win!</h2>
-      )}
     </div>
   );
 }

@@ -1,13 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import './GameInfo.css';
-export default function GameInfo() {
-  const [food, setFood] = useState();
+import Button from '../ui/button/Button';
+interface GameInfoProps {
+  foodCount: number;
+  foodEaten: number;
+  isWin: boolean;
+}
 
+export default function GameInfo({
+  foodCount,
+  foodEaten,
+  isWin,
+}: GameInfoProps) {
+  const [food, setFood] = useState();
+  console.log('Snake Length:', 'Food Count:', foodCount);
+  console.log('Snake Length:', 'Food Count:', foodEaten);
+  const isFoodEaten = (index: number) => {
+    if (foodCount - foodEaten <= index) {
+      return 'eaten';
+    }
+    return '';
+  };
   return (
     <div className='game-info'>
       <div className='game-rules'>
         <div className='comments'>
-          (// use keyboard) <br /> (// arrows to play)
+          {'// use keyboard'}
+          <br />
+          {'// arrows to play'}
         </div>
         <div className='controls'>
           <div className='arrow arrow-left'>
@@ -108,12 +128,25 @@ export default function GameInfo() {
         </div>
       </div>
       <div className='food-block'>
-        <div className='comments'>// food left</div>
+        <div className='comments'> {'// food left'}</div>
         <div className='foods'>
-          <div className='food-item'></div>
-          <div className='food-item'></div>
-          <div className='food-item eaten'></div>
+          {[...Array(foodCount)].map((_, index) => (
+            <div
+              key={index}
+              className={'food-item ' + isFoodEaten(index)}
+            ></div>
+          ))}
         </div>
+      </div>
+      <div className='buttons'>
+        <Button
+          disabled={!isWin}
+          style={{ width: '120px' }}
+          animate={isWin}
+          variant='primary'
+        >
+          Download CV
+        </Button>
       </div>
     </div>
   );
