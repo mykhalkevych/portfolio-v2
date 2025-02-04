@@ -39,11 +39,6 @@ export const Projects: ProjectItem[] = [
         color: '#5ed3f3',
         iconClass: 'ri-reactjs-line',
       },
-      {
-        name: 'Angular',
-        color: '#bd002e',
-        iconClass: 'ri-angularjs-line',
-      },
     ],
   },
   {
@@ -54,11 +49,6 @@ export const Projects: ProjectItem[] = [
     images: ['https://picsum.photos/400/300'],
     type: '_ui-animation',
     technologies: [
-      {
-        name: 'React',
-        color: '#5ed3f3',
-        iconClass: 'ri-reactjs-line',
-      },
       {
         name: 'Angular',
         color: '#bd002e',

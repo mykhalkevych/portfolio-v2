@@ -11,6 +11,7 @@ interface ICheckbox {
   name: string;
   iconClass?: string;
   color?: string;
+  onChange: (e: any, value: any) => void;
 }
 
 export interface ICheckboxProps extends Partial<ICheckbox> {
@@ -31,9 +32,14 @@ const Checkbox: FC<ICheckboxProps> = (props) => {
     className,
     error,
     color,
+    onChange,
   } = props;
   const defaultChecked = checked ? checked : false;
   const [isChecked, setIsChecked] = useState(defaultChecked);
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setIsChecked(() => e.target.checked);
+    onChange && onChange(e.target.checked, name);
+  };
   return (
     <div className='checkbox-wrapper'>
       <label>
@@ -41,7 +47,7 @@ const Checkbox: FC<ICheckboxProps> = (props) => {
           type='checkbox'
           checked={isChecked}
           className={isChecked ? 'checked' : ''}
-          onChange={() => setIsChecked((prev) => !prev)}
+          onChange={(e) => handleCheckboxChange(e)}
         />
         <span className='icon'>
           <i

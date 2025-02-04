@@ -39,8 +39,11 @@ export default function Home() {
           <p>
             <span className='primary-text'>const </span>
             <span className='third-text'>githubLink </span> ={' '}
-            <a className='secondary-text' href='/'>
-              “https://github.com/example/url”
+            <a
+              className='secondary-text'
+              href='https://github.com/mykhalkevych'
+            >
+              “https://github.com/mykhalkevych”
             </a>
           </p>
         </div>
