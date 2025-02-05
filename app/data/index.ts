@@ -26,7 +26,7 @@ export const PersonalNavList: NavListItem[] = [
     color: 'third',
     path: 'interests',
     type: 'folder',
-    anchors: ['football', 'volleyball'],
+    anchors: ['technologies', 'sports'],
   },
 ];
 
@@ -43,7 +43,7 @@ export const ProfessionalNavList: NavListItem[] = [
     color: 'secondary',
     path: 'skills',
     type: 'folder',
-    anchors: ['skills'],
+    anchors: ['primary', 'secondary', 'other'],
   },
   {
     title: 'certificates',

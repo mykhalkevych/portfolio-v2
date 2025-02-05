@@ -4,7 +4,6 @@ import { CodeBlock, dracula } from 'react-code-blocks';
 import { aboutData } from '../../data';
 import TypeIt from 'typeit-react';
 export default function Page({ params }: { params: { folder: string } }) {
-  console.log(params.folder);
   const text: string = aboutData[params.folder];
 
   return (
