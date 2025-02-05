@@ -57,7 +57,7 @@ export default function ContactForm({ onFormChange }: ContactFormProps) {
           <textarea
             {...register('message', { required: true })}
             id='message'
-            placeholder='Hey! Just checked your website and it looks awesome! Also, I checked your articled on Medium. Lerned a few nice tips. Thanks! |'
+            placeholder='Hey! Just checked your website and it looks awesome!'
           />
           <span className='error'>
             {errors.message && <span>This field is required</span>}

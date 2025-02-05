@@ -2,29 +2,26 @@ import { ProjectItem } from './../interfaces';
 export const Projects: ProjectItem[] = [
   {
     id: '1',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry ',
-    name: 'Project 1',
-    images: ['https://picsum.photos/400/300/'],
+    description: `This portfolio website is a personal showcase of my professional journey, skills, and projects,
+       designed to provide an interactive and engaging experience for visitors.
+       Built using Next.js, a React-based framework, the website is optimized for speed, SEO, and scalability.`,
+    name: 'Portfolio',
+    images: [
+      '/images/portfolio1.jpg',
+      '/images/portfolio2.jpg',
+      '/images/portfolio3.jpg',
+    ],
     link: 'github.com',
-    type: '_ui-animation',
+    type: '_portfolio',
     technologies: [
       {
-        name: 'Vue',
+        name: 'Next.js',
         color: '#3fb27f',
-        iconClass: 'ri-vuejs-line',
-      },
-      {
-        name: 'HTML',
-        color: '#dd4b25',
-        iconClass: 'ri-html5-line',
-      },
-      {
-        name: 'CSS',
-        color: '#1572b7',
-        iconClass: 'ri-css3-line',
+        iconClass: 'ri-nextjs-line',
       },
     ],
+    duration: '2 months',
+    activities: ['Design', 'Development', 'Testing'],
   },
   {
     id: '2',

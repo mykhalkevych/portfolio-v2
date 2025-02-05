@@ -34,9 +34,10 @@ const ProjectListItem: FC<Props> = ({ item }) => {
             ))}
           </div>
           <p>{item.description}</p>
-          <Button>
-            <Link href={`/projects/${item.id}`}> view-project</Link>
-          </Button>
+
+          <Link href={`/projects/${item.id}`}>
+            <Button> view-project</Button>
+          </Link>
         </div>
       </div>
     </div>

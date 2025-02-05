@@ -8,19 +8,19 @@ export default function ContactInfo() {
       <div>
         <a href='mailto:github.com'>
           <RiMailFill />
-          user@gmail.com
+          nmykhalkevych@gmail.com
         </a>
       </div>
       <div>
-        <a href='tel:+380678488888'>
+        <a href='tel:+38067********'>
           <RiPhoneFill />
-          +380678488888
+          +38067********
         </a>
       </div>
       <div className='additional-contacts'>
         <SubNavTitle title='find-me-also-in'></SubNavTitle>
         <div>
-          <a href='mailto:github.com'>
+          <a href='https://discordapp.com/users/nazar542_09639'>
             <RiExternalLinkLine />
             discord account
           </a>

@@ -8,4 +8,6 @@ export interface ProjectItem {
   images: string[];
   description: string;
   technologies: Technology[];
+  duration?: string;
+  activities?: string[];
 }
