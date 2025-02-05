@@ -16,6 +16,16 @@ export const Technologies: Technology[] = [
     iconClass: 'ri-vuejs-line',
   },
   {
+    name: 'Node.js',
+    color: '#8cc84b',
+    iconClass: 'ri-nodejs-line',
+  },
+  {
+    name: 'Next',
+    color: '#3fb27f',
+    iconClass: 'ri-nextjs-line',
+  },
+  {
     name: 'HTML',
     color: '#e96228',
     iconClass: 'ri-html5-line',

@@ -25,6 +25,12 @@ export default function ContactInfo() {
             discord account
           </a>
         </div>
+        <div>
+          <a href='https://www.linkedin.com/in/nazar-mykhalkevych-00773813b/'>
+            <RiExternalLinkLine />
+            linkedin account
+          </a>
+        </div>
       </div>
     </div>
   );

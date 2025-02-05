@@ -15,7 +15,12 @@ export const Projects: ProjectItem[] = [
     type: '_portfolio',
     technologies: [
       {
-        name: 'Next.js',
+        name: 'React',
+        color: '#5ed3f3',
+        iconClass: 'ri-reactjs-line',
+      },
+      {
+        name: 'Next',
         color: '#3fb27f',
         iconClass: 'ri-nextjs-line',
       },
@@ -25,92 +30,139 @@ export const Projects: ProjectItem[] = [
   },
   {
     id: '2',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-    name: 'Project 2',
-    images: ['https://picsum.photos/400/300'],
-    type: '_game',
+    description: `Hospital Information System for private clinics: online doctor's appointment, electronic patient medical records, telemedicine, website creation.`,
+    name: 'Ademrius',
+    images: [
+      '/images/ademrius1.jpg',
+      '/images/ademrius2.jpg',
+      '/images/ademrius3.jpg',
+    ],
+    link: 'https://ademrius.com/uk/',
+    type: '_medical_software',
     technologies: [
       {
-        name: 'React',
-        color: '#5ed3f3',
-        iconClass: 'ri-reactjs-line',
+        name: 'Vue',
+        color: '#3fb27f',
+        iconClass: 'ri-vuejs-line',
       },
+    ],
+    duration: '8 months',
+    activities: [
+      'Development',
+      'Make architecture',
+      'Code review and refactoring',
     ],
   },
   {
     id: '3',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-    name: 'Project 3',
-    images: ['https://picsum.photos/400/300'],
-    type: '_ui-animation',
+    description: `sPReader LTD is a smart digital PR company in Israel, which has developed innovative technology 
+      for advertising and marketing small and medium-sized businesses,
+      in the easiest and most professional digital process.
+
+    Sprearder's vision is to strengthen the power of local brands,
+    promote small and medium-sized businesses and advertise them on leading news sites, blogs, and digital media.`,
+    name: 'sPReader',
+    images: [
+      '/images/spreader1.jpg',
+      '/images/spreader2.jpg',
+      '/images/spreader3.jpg',
+    ],
+    link: 'https://spreader.io/',
+    type: '_digital_media',
     technologies: [
       {
         name: 'Angular',
         color: '#bd002e',
         iconClass: 'ri-angularjs-line',
       },
+      {
+        name: 'Node.js',
+        color: '#8cc84b',
+        iconClass: 'ri-nodejs-line',
+      },
+    ],
+    duration: '7 months',
+    activities: [
+      'Development',
+      'Make architecture',
+      'Code review and refactoring',
     ],
   },
   {
     id: '4',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-    name: 'Project 4',
-    images: ['https://picsum.photos/400/300'],
-    type: '_ui-animation',
+    description: `Business Intelligence software that determines and maintains the analysis of sales instruments
+      (website, social networks, call-center, sales brokers, corporate sales in bulk) across all regions.
+      Activation Products is the huge eCommerce project from Canada. The company is a manufacturer with the full process –
+      from raw materials to final product. They sell premium health products and supplements worldwide (about 1000 pcs / day).
+      The solution automated the control of the sales process.`,
+    name: 'Activation Products',
+    images: [
+      '/images/activationProduct1.jpg',
+      '/images/activationProduct2.jpg',
+    ],
+    link: 'https://activation-products.com',
+    type: '_ecommerce',
     technologies: [
       {
-        name: 'React',
-        color: '#5ed3f3',
-        iconClass: 'ri-reactjs-line',
+        name: 'HTML',
+        color: '#e96228',
+        iconClass: 'ri-html5-line',
       },
       {
-        name: 'Angular',
-        color: '#bd002e',
-        iconClass: 'ri-angularjs-line',
+        name: 'CSS',
+        color: '#1572b7',
+        iconClass: 'ri-css3-line',
       },
+    ],
+    duration: '6 months',
+    activities: [
+      'Development',
+      'Make architecture',
+      'Code review and refactoring',
     ],
   },
   {
     id: '5',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-    name: 'Project 5',
-    images: ['https://picsum.photos/400/300'],
-    type: '_game',
+      'Digital health programs give you access to behavioral coaching via web or mobile, night or day - like having the world’s leading experts on call but tailored to you and your lifestyle.',
+    name: 'DNA-Lifestyle',
+    images: ['/images/dna1.jpg', '/images/dna2.jpg'],
+    type: '_healthcare',
     technologies: [
       {
-        name: 'React',
-        color: '#5ed3f3',
-        iconClass: 'ri-reactjs-line',
+        name: 'HTML',
+        color: '#e96228',
+        iconClass: 'ri-html5-line',
       },
       {
-        name: 'Angular',
-        color: '#bd002e',
-        iconClass: 'ri-angularjs-line',
+        name: 'CSS',
+        color: '#1572b7',
+        iconClass: 'ri-css3-line',
       },
     ],
+    duration: '5 months',
+    activities: ['Development', 'Code review and refactoring'],
   },
   {
     id: '6',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-    name: 'Project 6',
-    images: ['https://picsum.photos/400/300'],
-    type: '_ui-animation',
+    description: `An Inclusive Intelligent Total Talent Acquisition Platform | ProvenBase. A cutting-edge talent acquisition platform that is nimble, discovers top talent, develops talent strategy,
+     streamlines your tech stack, empowers HR, and monitors hiring goals with advanced analytics.`,
+    name: 'Provenbase',
+    link: 'https://provenbase.com/',
+    images: [
+      '/images/provenBase1.jpg',
+      '/images/provenBase2.jpg',
+      '/images/provenBase3.jpg',
+    ],
+    type: '_hr_software',
     technologies: [
-      {
-        name: 'React',
-        color: '#5ed3f3',
-        iconClass: 'ri-reactjs-line',
-      },
       {
         name: 'Angular',
         color: '#bd002e',
         iconClass: 'ri-angularjs-line',
       },
     ],
+    duration: '11 months',
+    activities: ['Development', 'Code review and refactoring', 'Testing'],
   },
 ];
