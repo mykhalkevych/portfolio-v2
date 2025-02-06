@@ -7,7 +7,7 @@ export const Projects: ProjectItem[] = [
        Built using Next.js, a React-based framework, the website is optimized for speed, SEO, and scalability.`,
     name: 'Portfolio',
     images: [
-      '/images/portfolio1.jpg',
+      '/portfolio1.jpg',
       '/images/portfolio2.jpg',
       '/images/portfolio3.jpg',
     ],
