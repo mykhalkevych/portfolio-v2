@@ -10,9 +10,6 @@ export default function Home() {
   const [isWin, setIsWin] = useState(false);
   const foodCount = 10;
   const handleFoodEaten = (newSnakeLength: number) => {
-    console.log('Snake Length:', newSnakeLength);
-    // You can update the state or display it in the parent
-
     setEatenFood((prev) => prev + 1);
   };
 
@@ -21,7 +18,6 @@ export default function Home() {
   };
 
   const setWin = () => {
-    console.log('You win!');
     setIsWin(true);
   };
 

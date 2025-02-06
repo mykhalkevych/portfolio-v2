@@ -20,8 +20,6 @@ interface Props {
 const SubNavigation: FC<Props> = ({ navList, navTitle }) => {
   const pathname = usePathname();
   const router = useRouter();
-  console.log(pathname);
-  console.log(router);
   return (
     <div className='sub-nav'>
       <SubNavTitle title={navTitle}></SubNavTitle>

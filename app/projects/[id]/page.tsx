@@ -1,13 +1,9 @@
 import { Projects } from '@/app/data/projects';
 import ProjectDetail from '../components/ProjectDetail';
 
-export async function generateStaticParams() {
-  const ids = await fetchIds();
-  return ids.map((id) => ({ params: { id } }));
-}
-
-async function fetchIds() {
-  return await Projects.map((project) => project.id);
+export function generateStaticParams() {
+  const ids = Projects.map((project) => project.id);
+  return ids.map((id) => ({ id }));
 }
 
 export default function Page({ params }: { params: { id: string } }) {

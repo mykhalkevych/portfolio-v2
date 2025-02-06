@@ -234,8 +234,6 @@ export default function SnakeGame({
   }, [snake, food, foodCount]);
 
   const startGame = () => {
-    console.log('start game');
-
     setGameStarted(true);
     setGameOver(false);
     setSnake([

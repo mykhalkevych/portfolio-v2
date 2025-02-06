@@ -13,8 +13,6 @@ export default function GameInfo({
   isWin,
 }: GameInfoProps) {
   const [food, setFood] = useState();
-  console.log('Snake Length:', 'Food Count:', foodCount);
-  console.log('Snake Length:', 'Food Count:', foodEaten);
   const isFoodEaten = (index: number) => {
     if (foodCount - foodEaten <= index) {
       return 'eaten';
