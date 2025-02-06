@@ -1,11 +1,8 @@
 'use client';
-
-import { CodeBlock, dracula } from 'react-code-blocks';
-import { aboutData } from '../../data';
 import TypeIt from 'typeit-react';
-export default function Page({ params }: { params: { folder: string } }) {
-  const text: string = aboutData[params.folder];
+import { CodeBlock, dracula } from 'react-code-blocks';
 
+export default function TypeItComponent({ text }: { text: string }) {
   return (
     <TypeIt options={{ speed: 2 }}>
       <CodeBlock
