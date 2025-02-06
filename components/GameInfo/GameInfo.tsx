@@ -21,7 +21,10 @@ export default function GameInfo({
   };
 
   const handleDownload = () => {
-    const fileUrl = '/files/CV_Nazar_Mykhalkevych_Frontend_Developer.pdf'; // Relative path to the PDF file
+    const isProd = process.env.NODE_ENV === 'production';
+    const baseUrl = isProd ? '/portfolio-v2' : '';
+    const fileUrl =
+      baseUrl + '/files/CV_Nazar_Mykhalkevych_Frontend_Developer.pdf'; // Relative path to the PDF file
 
     // Create an anchor element and trigger the download
     const link = document.createElement('a');

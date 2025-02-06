@@ -1,4 +1,7 @@
 import { ProjectItem } from './../interfaces';
+
+const isProd = process.env.NODE_ENV === 'production';
+const baseUrl = isProd ? '/portfolio-v2' : '';
 export const Projects: ProjectItem[] = [
   {
     id: '1',
@@ -7,9 +10,9 @@ export const Projects: ProjectItem[] = [
        Built using Next.js, a React-based framework, the website is optimized for speed, SEO, and scalability.`,
     name: 'Portfolio',
     images: [
-      '/portfolio1.jpg',
-      '/images/portfolio2.jpg',
-      '/images/portfolio3.jpg',
+      baseUrl + '/images/portfolio1.jpg',
+      baseUrl + '/images/portfolio2.jpg',
+      baseUrl + '/images/portfolio3.jpg',
     ],
     link: 'github.com',
     type: '_portfolio',
@@ -33,9 +36,9 @@ export const Projects: ProjectItem[] = [
     description: `Hospital Information System for private clinics: online doctor's appointment, electronic patient medical records, telemedicine, website creation.`,
     name: 'Ademrius',
     images: [
-      '/images/ademrius1.jpg',
-      '/images/ademrius2.jpg',
-      '/images/ademrius3.jpg',
+      baseUrl + '/images/ademrius1.jpg',
+      baseUrl + '/images/ademrius2.jpg',
+      baseUrl + '/images/ademrius3.jpg',
     ],
     link: 'https://ademrius.com/uk/',
     type: '_medical_software',
@@ -63,9 +66,9 @@ export const Projects: ProjectItem[] = [
     promote small and medium-sized businesses and advertise them on leading news sites, blogs, and digital media.`,
     name: 'sPReader',
     images: [
-      '/images/spreader1.jpg',
-      '/images/spreader2.jpg',
-      '/images/spreader3.jpg',
+      baseUrl + '/images/spreader1.jpg',
+      baseUrl + '/images/spreader2.jpg',
+      baseUrl + '/images/spreader3.jpg',
     ],
     link: 'https://spreader.io/',
     type: '_digital_media',
@@ -97,8 +100,8 @@ export const Projects: ProjectItem[] = [
       The solution automated the control of the sales process.`,
     name: 'Activation Products',
     images: [
-      '/images/activationProduct1.jpg',
-      '/images/activationProduct2.jpg',
+      baseUrl + '/images/activationProduct1.jpg',
+      baseUrl + '/images/activationProduct2.jpg',
     ],
     link: 'https://activation-products.com',
     type: '_ecommerce',
@@ -126,7 +129,7 @@ export const Projects: ProjectItem[] = [
     description:
       'Digital health programs give you access to behavioral coaching via web or mobile, night or day - like having the world’s leading experts on call but tailored to you and your lifestyle.',
     name: 'DNA-Lifestyle',
-    images: ['/images/dna1.jpg', '/images/dna2.jpg'],
+    images: [baseUrl + '/images/dna1.jpg', baseUrl + '/images/dna2.jpg'],
     type: '_healthcare',
     technologies: [
       {
@@ -150,9 +153,9 @@ export const Projects: ProjectItem[] = [
     name: 'Provenbase',
     link: 'https://provenbase.com/',
     images: [
-      '/images/provenBase1.jpg',
-      '/images/provenBase2.jpg',
-      '/images/provenBase3.jpg',
+      baseUrl + '/images/provenBase1.jpg',
+      baseUrl + '/images/provenBase2.jpg',
+      baseUrl + '/images/provenBase3.jpg',
     ],
     type: '_hr_software',
     technologies: [
