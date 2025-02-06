@@ -2,7 +2,6 @@
 import GameInfo from '@/components/GameInfo/GameInfo';
 import SnakeGame from '@/components/SnakeGame/SnakeGame';
 import { useState } from 'react';
-import { set } from 'react-hook-form';
 import TypeIt from 'typeit-react';
 
 export default function Home() {
